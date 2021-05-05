@@ -1,0 +1,168 @@
+.header{
+    background-color: #aca3a3;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    font-size: 130%;
+}
+
+header>img{margin-top: 5px;}
+pre{font-size: 1.1em;}
+
+.menu_main{
+    position: absolute;
+    left: 25%;
+    top: 10px;
+}
+
+#menu_toggle{display: none;}
+.menu_icon{display: none;}
+
+#group_search{left:-10%}
+.menu_main>a{color: black;}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #090a09;
+}
+
+.main_title{ padding: 20px; text-align: center; background-color:#090a09; color: #e2e2e2;}
+h1.info_title{ font-size: 180%; font-weight: bold; margin-top: 20px; }
+.ytvideo{ margin-bottom: 20px; margin-top: 20px;}
+.row{ background: #aca3a3; border-radius: 20px; margin-top: 20px;} 
+
+.footer{
+    background-color: #aca3a3;
+    background-position: 0px -120px;
+    color: black;
+    background-size: cover;
+    padding: 10px;
+    margin-top: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+/*Media Queries*/
+
+@media screen and (max-width:600px){
+    .logo{width: 30%;}
+    .menu_main{display: none;}
+    .movie_description{margin-bottom: 20px;}
+}
+
+@media screen and (min-width:601px) and (max-width:700px){
+    .menu_main{ left: 20%; font-size: 15px; margin-top: -10px;}
+    .menu_main>a{font-size: 70%; margin-left: -10px; margin-right: -10px;}
+    .search_bar{display: none;}
+    #search-addon{position: relative; margin: auto; left: 62%; margin-top: -10px; padding: 10px;}
+    .movie_description{margin-bottom: 10px;}
+}
+
+@media screen and (min-width:701px) and (max-width:980px){
+    .menu_main{ left: 15%; font-size: 20px; margin-top: -10px;}
+    .menu_main>a{font-size: 70%;}
+    .search_bar{display: none;}
+    #search-addon{position: relative; margin: auto; left: 590px; margin-top: -42px; padding: 10px;}
+    .movie_description{margin-bottom: 10px;}
+}
+
+@media screen and (min-width:981px) and (max-width:1300px){
+    .menu_main{ left: 15%; font-size: 25px; margin-top: -5px;}
+    .menu_main>a{font-size: 70%;}
+    .search_bar{display: none;}
+    #search-addon{position: relative; margin: auto; left: 62%; margin-top: -5px; padding: 10px;}
+    .movie_description{margin-bottom: 10px;}
+}
+
+@media screen and (max-width:600px){
+    .header{
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        z-index: 99999;
+    }
+    .header nav{
+        display: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .main_title{margin-top: 20px;}
+    .menu_main a{display: none;}
+    .ytvideo{z-index: 0;}
+    .yt_video_iframe{z-index: 0;}
+    
+    .menu_main{
+        display: flex;
+        position: fixed;
+        flex-wrap: wrap;
+        align-content: center;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 0%;
+        overflow: hidden;
+        transition: height 0.3s;
+        -moz-transition: height 0.3s;
+        -webkit-transition: height 0.3s;
+        -o-transition: height 0.3s;
+    }
+    .menu_main a{
+        display: block;
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
+    .menu_main a{
+        display: block;
+        text-align: right;
+        width: 100%;
+    }
+    .menu_main a div{
+        margin-left: 70px;
+    }
+    .menu_icon{
+        display: block;
+        color: black;
+        width: 50px;
+        height: inherit;
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        line-height: 60px;
+    }
+    .menu_icon i{
+        font-size: 1.7em;
+    }
+    #menu_toggle:checked ~ label i:nth-child(2){
+        display: block;
+    }
+    #menu_toggle:not(checked) ~ a{
+        display: none;
+    }
+    #menu_toggle:checked ~ a{
+        display: block;
+        color: rgb(223, 223, 223);
+        height: 14%
+    }
+
+    #menu_toggle:checked ~ .menu_list{
+        background-color: #414149;
+    }
+    
+
+    #menu_toggle:checked ~ label i:first-child{
+        display: none;
+    }
+    #menu_toggle:not(checked) ~ label i:nth-child(2){
+        display: none;
+    }
+    #menu_toggle:not(checked) ~ label i:first-child{
+        display: block;
+    }
+
+    #menu_toggle:checked ~ ul{
+        height: 100%;
+    }
+
+}
